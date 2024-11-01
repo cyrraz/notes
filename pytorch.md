@@ -88,6 +88,25 @@ for epoch in range(epochs):
         opt.zero_grad()
 ```
 
+### Use `torch.compile` to just-in-time compile PyTorch code
+
+```python
+# Important to wrap the learning rate in a tensor in this case to avoid multiple compilations
+opt = torch.optim.Adam(model.parameters(), lr=torch.tensor(0.01))
+sched = torch.optim.lr_scheduler.LinearLR(opt, total_iters=5)
+
+@torch.compile()
+def fn():
+    opt.step()
+    sched.step()
+```
+
+- Think about regional compilation of repeated layers in the model
+
+```python
+self.layers = torch.nn.ModuleList([torch.compile(Layer()) for _ in range(64)])
+```
+
 ### Other tools
 
 - Captum is an open source, extensible library for model interpretability built on PyTorch.
@@ -100,4 +119,15 @@ for epoch in range(epochs):
 
 - The function `torch.quantization.fuse_modules()` can fuse Convolutional layers, Batch normalization layers, and ReLU layers in a model for optimization. Pytorch provides other quantization tools as well to optimize models for deployment.
 
--
+- Many tips to improve the performance of PyTorch models can be found in the [PyTorch Performance Tuning Guide](https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html).
+
+- The PyTorch Distributed library (`torch.distributed`) includes a collective of parallelism modules, a communications layer, and infrastructure for launching and debugging large training jobs.
+
+  - `torch.distributed.optim.ZeroRedundancyOptimizer` shards optimizer states across distributed data-parallel processes to reduce per-process memory footprint.
+  - `torch.distributed.optim.DistributedOptimizer` distributes the optimizer across multiple devices.
+  - `torch.distributed.checkpoint` and `torch.distributed.async_checkpoint` are mechanisms to save and load checkpoints in a distributed setting.
+  - `torch.distributed.tensor` (i.e. Distributed Tensords or DTensor) abstracts away the complexities of tensor communication in distributed training.
+
+- Compute Unified Device Architecture (CUDA) Remote Procedure Call (RPC) supports directly sending Tensors from local CUDA memory to remote CUDA memory without copying to CPU memory first.
+
+- It is possible to deploy a PyTorch model on Vertex AI, which is a development platform provided by Google for building and using generative AI.
