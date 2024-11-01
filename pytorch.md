@@ -1,12 +1,6 @@
-# Noes on PyTorch
+# Notes on PyTorch
 
 - Adapted from [Pytorch recipes](https://pytorch.org/tutorials/recipes/recipes_index.html)
-
-### Open an interactive console here
-
-```python
-import code; code.interact(local=locals())`
-```
 
 ### Save and load checkpoint
 
