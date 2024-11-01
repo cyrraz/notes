@@ -49,7 +49,7 @@ with torch.device("meta"):
 model.load_state_dict(state_dict, assign=True) # avoid copying
 ```
 
-Enable TORCH_LOGS to track compilation stages in PyTorch
+- Enable TORCH_LOGS to track compilation stages in PyTorch
 
 ```python
 import torch, logging
