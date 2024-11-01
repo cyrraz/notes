@@ -3,5 +3,5 @@
 ### Open an interactive console here
 
 ```python
-import code; code.interact(local=locals())`
+import code; code.interact(local=locals())
 ```
