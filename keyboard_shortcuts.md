@@ -21,12 +21,17 @@
 - Open new tab: `Ctrl` + `T`
 - Recover closed tab: `Ctrl` + `Shift` + `T`
 
-### VS Code
+### VS Code (Ctrl is replaced with Cmd on macOS)
 
 - General
 
   - Command Palette: `Ctrl` + `Shift` + `P`
   - User settings: `Ctrl` + `,`
+
+- Editing
+
+  - Toggle comment: `Ctrl` + `/`
+  - Format document: `Ctrl` + `Shift` + `I` (Linux) or `Shift` + `Alt` + `F` (macOS)
 
 - Navigation
 
@@ -39,12 +44,13 @@
   - Open Markdown preview: `Ctrl` + `K` `V`
   - Zen mode: `Ctrl` + `K` `Z`
 
+- File Management
+
+  - New file: `Ctrl` + `N`
+  - Open file: `Ctrl` + `O`
+  - Save file: `Ctrl` + `S`
+
 - Terminal
 
-  - Show terminal: `Ctrl` + `` ` ``
-  - New terminal: `Ctrl` + `Shift` + `` ` ``
-
-- Editing
-
-  - Toggle comment: `Ctrl` + `/` (Linux) or `Cmd` + `/` (Mac)
-  - Format document: `Ctrl` + `Shift` + `I` (Linux) or `Cmd` + `Shift` + `I` (Mac)
+  - Show terminal: `Ctrl` + `` ` `` (Linux) or `^` + `` ` `` (macOS)
+  - New terminal: `Ctrl` + `Shift` + `` ` `` (Linux) or `^` + `~` (macOS)
