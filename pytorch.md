@@ -73,7 +73,7 @@ fn(torch.ones(2, 2), torch.zeros(2, 2))
 
 ```python
 # [...]
-
+use_amp = True
 opt = torch.optim.SGD(net.parameters(), lr=0.001)
 scaler = torch.cuda.amp.GradScaler(enabled=use_amp)
 
