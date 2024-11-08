@@ -49,7 +49,7 @@ with torch.device("meta"):
 model.load_state_dict(state_dict, assign=True) # avoid copy
 ```
 
-- Enable TORCH_LOGS to track compilation stages in PyTorch
+- Enable `TORCH_LOGS` to track compilation stages in PyTorch
 
 ```python
 import torch, logging
@@ -65,11 +65,11 @@ fn(torch.ones(2, 2), torch.zeros(2, 2))
 
 ### Use `torch.autocast` and `GradScaler` for mixed precision training
 
-- Instances of torch.autocast serve as context managers that allow regions of your script to run in mixed precision.
+- Instances of `torch.autocast` serve as context managers that allow regions of your script to run in mixed precision.
 
 - Gradient scaling helps prevent gradients with small magnitudes from flushing to zero (“underflowing”) when training with mixed precision.
 
-- torch.cuda.amp.GradScaler performs the steps of gradient scaling conveniently.
+- `torch.cuda.amp.GradScaler` performs the steps of gradient scaling conveniently.
 
 ```python
 # [...]
