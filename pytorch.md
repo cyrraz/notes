@@ -26,7 +26,7 @@ model = torch.load("model.pth")
 
 - `torch.profiler` provides functions to track runtime and memory usage across operations to identify performance bottlenecks.
 
-### Shape reasoning with an meta (abstract) device
+### Shape reasoning with a meta (abstract) device
 
 ```python
 import torch, torch.nn as nn
@@ -46,7 +46,7 @@ import torch, torch.nn as nn
 state_dict = torch.load("checkpoint.pth", mmap=True, weights_only=True)
 with torch.device("meta"):
     model = nn.Linear(10, 10)
-model.load_state_dict(state_dict, assign=True) # avoid copying
+model.load_state_dict(state_dict, assign=True) # avoid copy
 ```
 
 - Enable TORCH_LOGS to track compilation stages in PyTorch
