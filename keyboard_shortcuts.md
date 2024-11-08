@@ -14,7 +14,7 @@
 - Overview of active windows: `F3`
 - Switch between tabs: `Cmd` + `Shift` + `[`/`]`
 - Switch between windows: `Cmd` + `Tab`
-- Switch between workspaces: `Ctrl` + `←`/`→`
+- Switch between workspaces: `^` + `←`/`→`
 
 ### Firefox
 
