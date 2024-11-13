@@ -15,8 +15,8 @@
 - Switch between tabs: `Cmd` + `Shift` + `[`/`]`
 - Switch between windows: `Cmd` + `Tab`
 - Switch between workspaces: `^` + `←`/`→`
-- Screenshot (entire screen): `Shift` + `Cmd` + 3
-- Screenshot (portion of the screen): `Shift` + `Cmd` + 4
+- Screenshot (entire screen): `Shift` + `Cmd` + `3`
+- Screenshot (portion of the screen): `Shift` + `Cmd` + `4`
 
 ### Firefox
 
