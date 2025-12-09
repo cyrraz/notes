@@ -23,11 +23,11 @@ git push --set-upstream origin main
 
 On https://test.pypi.org → **Publishing**:
 
-- **Provider:** GitHub\
-- **PyPI project name:** \[PACKAGE-NAME\]\
-- **Owner:** USERNAME\
-- **Repository name:** \[PACKAGE-NAME\]\
-- **Workflow name/path:** cd.yml\
+- **Provider:** GitHub
+- **PyPI project name:** \[PACKAGE-NAME\]
+- **Owner:** USERNAME
+- **Repository name:** \[PACKAGE-NAME\]
+- **Workflow name/path:** cd.yml
 - **Environment name:** pypi
 
 ## 4. Create a Release
