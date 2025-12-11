@@ -57,14 +57,6 @@ On https://app.codecov.io/:
     - **Name:** `CODECOV_TOKEN`\
     - **Value:** the copied token
 
-Add these lines to your `README.md`:
-
-```markdown
-[![Coverage][coverage-badge]][coverage-link]
-[coverage-badge]: https://codecov.io/gh/USERNAME/PACKAGE_NAME/branch/main/graph/badge.svg
-[coverage-link]: https://codecov.io/gh/USERNAME/PACKAGE_NAME
-```
-
 ## 7. Add discussion feature for the repository
 
 Enable the **Discussions** feature in the repository settings.
